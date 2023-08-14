@@ -5,6 +5,45 @@
 {% endblock %}
 
 {% block content %}
-    <h1>Welcome to my blog</h1>
-    <p>Home page</p>
+    <header id='main-navigation'>
+        <h1><a href=''>John's Blog</a></h1>
+
+        <nav>
+          <a href=''>All Posts</a>
+      </nav>
+    </header>
+    
+    <section id='welcome'>
+        <header>
+            <img src="" alt="Author of this blog">
+            <h2>Author's blog</h2>
+            <p>blog content</p>
+        </header>
+    </section>
+
+    <section id='latest-posts'>
+        <h2>My latest thoughts</h2>
+
+        <ul>
+            {% comment %} {% for thing of things%} {% endcomment %}
+            <li>
+                <article class='post'>
+                    <a href="">
+                        <img src="" alt="blog-related-img">
+                        <div class='post__content'>
+                            <h3>Blog title</h3>
+                            <p>Blog content</p>
+                        </div>
+                    </a>
+                </article>
+            </li>
+            {% comment %} {% endfor %} {% endcomment %}
+        </ul>
+    </section>
+
+    <section id='about'>
+        <h2>What I do</h2>
+        <p>programming</p>
+        <p>lipsum</p>
+    </section>
 {% endblock%}
