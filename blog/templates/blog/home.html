@@ -1,7 +1,12 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
     <title>Home</title>
+{% endblock %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'blog/index.css' %}">
 {% endblock %}
 
 {% block content %}
@@ -15,8 +20,8 @@
     
     <section id='welcome'>
         <header>
-            <img src="" alt="Author of this blog">
-            <h2>Author's blog</h2>
+            <img src="{% static "blog/images/john4.png"%}" alt="Author of this blog">
+            <h2>John's blog</h2>
             <p>blog content</p>
         </header>
     </section>
@@ -29,7 +34,7 @@
             <li>
                 <article class='post'>
                     <a href="">
-                        <img src="" alt="blog-related-img">
+                        <img src="{% static 'blog/images/mountains.jpg'%}" alt="blog-related-img">
                         <div class='post__content'>
                             <h3>Blog title</h3>
                             <p>Blog content</p>
